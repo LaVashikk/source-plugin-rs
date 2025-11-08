@@ -1,0 +1,9 @@
+# Helper aliases for building
+
+[alias]
+build-win = "build --target i686-pc-windows-msvc --release"
+build-win-gnu = "build --target i686-pc-windows-gnu --release"
+build-linux = "build --target i686-unknown-linux-gnu --release"
+
+[target.i686-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]
